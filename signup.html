@@ -1,29 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-
-<title>Signup</title>
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CreativeHub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="auth-page">
 
-<nav class="navbar">
+    <nav class="navbar">
+        <div class="logo">CreativeHub</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
 
-<div class="logo">CreativeHub</div>
+    <section class="auth-hero">
+        <div class="auth-card">
+            <div class="auth-left">
+                <h1>Create your account</h1>
+                <p>Join CreativeHub to access powerful design tools, analytics, and collaboration features.</p>
+                <ul class="auth-features">
+                    <li>Instant access to premium templates</li>
+                    <li>Real-time team collaboration</li>
+                    <li>Priority support & resources</li>
+                </ul>
+                <p class="auth-note">Already have an account? <a href="login.html">Sign in here</a>.</p>
+            </div>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="dashboard.html">Dashboard</a>
-<a href="contact.html">Contact</a>
-<a href="signup.html">Sign Up</a>
-<a href="login.html">Login</a>
-</div>
+            <div class="auth-right">
+                <h2>Sign Up</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" name="name" required placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" name="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" name="password" required placeholder="********">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupConfirm">Confirm Password</label>
+                        <input type="password" id="signupConfirm" name="confirm" required placeholder="********">
+                    </div>
+                    <button type="submit" class="submit-btn">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-</nav>
-
-<h1 class="center">Signup Page</h1>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,60 +1,150 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<meta charset="UTF-8">
-<title>CreativeHub Dashboard</title>
+    <meta charset="UTF-8">
+    <title>CreativeHub Dashboard</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">CreativeHub</div>
+        <div class="logo">CreativeHub</div>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="dashboard.html">Dashboard</a>
-<a href="contact.html">Contact</a>
-<a href="signup.html">Sign Up</a>
-<a href="login.html">Login</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </div>
 
-</nav>
+    </nav>
 
+    <!-- PERFORMANCE METRICS -->
 
-<div class="slider-container">
+    <section class="performance-metrics">
+        <div class="container">
+            <h2>Performance Dashboard</h2>
+            <p>Track our growth and success metrics that showcase why CreativeHub is the leading choice for designers worldwide.</p>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>10,000+</h3>
+                    <p>Active Users</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>500+</h3>
+                    <p>Projects Completed</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>98%</h3>
+                    <p>Client Satisfaction</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 98%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>24/7</h3>
+                    <p>Support Available</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="controls">
-<button id="prevBtn">Prev</button>
-<button id="nextBtn">Next</button>
-</div>
+    <!-- CHARTS SECTION -->
 
-<div class="slider" id="slider">
+    <section class="charts-section">
+        <div class="container">
+            <h2>Data Insights</h2>
+            <p>Visualize our performance metrics and growth trends with interactive charts.</p>
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Performance Growth</h3>
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Regional Performance</h3>
+                    <canvas id="chart2"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Project Status</h3>
+                    <canvas id="chart3"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="graph-card">
-<canvas id="chart1"></canvas>
-</div>
+    <section class="success-stories">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <p>See how our clients have transformed their businesses with CreativeHub.</p>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3>Tech Startup Growth</h3>
+                        <p>"CreativeHub helped us design an intuitive app that increased our user engagement by 300%."</p>
+                        <p class="client">- Sarah Chen, CEO of InnovateTech</p>
+                    </div>
+                    <div class="story-stats">
+                        <div class="stat">
+                            <h4>300%</h4>
+                            <p>User Engagement</p>
+                        </div>
+                        <div class="stat">
+                            <h4>50%</h4>
+                            <p>Revenue Increase</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3>E-commerce Redesign</h3>
+                        <p>"Our online sales doubled after redesigning with CreativeHub's professional tools."</p>
+                        <p class="client">- Mike Johnson, Founder of ShopSmart</p>
+                    </div>
+                    <div class="story-stats">
+                        <div class="stat">
+                            <h4>200%</h4>
+                            <p>Sales Growth</p>
+                        </div>
+                        <div class="stat">
+                            <h4>40%</h4>
+                            <p>Conversion Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="graph-card">
-<canvas id="chart2"></canvas>
-</div>
+    <!-- CALL TO ACTION -->
 
-<div class="graph-card">
-<canvas id="chart3"></canvas>
-</div>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join thousands of satisfied clients and take your design projects to the next level with CreativeHub.</p>
+            <a href="contact.html" class="btn cta-btn">Contact Us Today</a>
+        </div>
+    </section>
 
-</div>
-
-</div>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

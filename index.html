@@ -1,62 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CreativeHub</title>
+    <title>CreativeHub</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">CreativeHub</div>
+        <div class="logo">CreativeHub</div>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="dashboard.html">Dashboard</a>
-<a href="contact.html">Contact</a>
-<a href="signup.html">Sign Up</a>
-<a href="login.html">Login</a>
-</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </div>
 
-</nav>
+    </nav>
 
 
-<!-- HERO SECTION -->
+    <!-- HERO SECTION -->
 
-<section class="hero">
+    <section class="hero">
 
-<video autoplay muted loop class="hero-video">
+        <video autoplay muted loop class="hero-video">
 <source src="hero.mp4" type="video/mp4">
 </video>
 
-<div class="overlay"></div>
+        <div class="overlay"></div>
 
-<div class="hero-content">
+        <div class="hero-content">
 
-<h1>CreativeHub</h1>
-<h2>Design. Create. Inspire.</h2>
+            <h1>CreativeHub</h1>
+            <h2>Design. Create. Inspire.</h2>
 
-<p>
-Professional platform for graphic design and UI creation
-</p>
+            <p>
+                Professional platform for graphic design and UI creation
+            </p>
 
-<button class="btn">Explore Designs</button>
+            <a href="designs.html" class="btn">Explore Designs</a>
 
-</div>
+        </div>
 
-</section>
+    </section>
 
+    <!-- ABOUT SECTION -->
 
-<script src="script.js"></script>
+    <section class="about">
+        <div class="container">
+            <h2>About Our Company</h2>
+            <p>CreativeHub is a leading platform dedicated to empowering designers, artists, and creators worldwide. We provide cutting-edge tools, resources, and a vibrant community to bring your creative visions to life. Our mission is to inspire innovation
+                and foster collaboration in the world of design and UI creation.</p>
+            <div class="about-grid">
+                <div class="about-item">
+                    <h3>Our Vision</h3>
+                    <p>To be the ultimate hub for creativity, where ideas transform into reality through seamless design experiences.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Our Mission</h3>
+                    <p>Empowering creators with professional tools, fostering a supportive community, and driving innovation in design.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Our Values</h3>
+                    <p>Innovation, Collaboration, Excellence, and Creativity drive everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+    <!-- TEAM SECTION -->
+
+    <section class="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <p>Our talented team of designers, developers, and creative professionals work together to make CreativeHub the best platform for your creative needs.</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://picsum.photos/300/300?random=2" alt="Team Member 1">
+                    <h3>Alice Johnson</h3>
+                    <p>Lead Designer</p>
+                    <p>Expert in UI/UX design with 8+ years of experience.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://picsum.photos/300/300?random=3" alt="Team Member 2">
+                    <h3>Bob Smith</h3>
+                    <p>Senior Developer</p>
+                    <p>Full-stack developer passionate about creating innovative web solutions.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://picsum.photos/300/300?random=4" alt="Team Member 3">
+                    <h3>Carol Davis</h3>
+                    <p>Creative Director</p>
+                    <p>Visionary leader guiding our creative direction and strategy.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://picsum.photos/300/300?random=5" alt="Team Member 4">
+                    <h3>David Wilson</h3>
+                    <p>Marketing Specialist</p>
+                    <p>Driving brand awareness and connecting with our creative community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRAPHS SECTION -->
+
+    <section class="graphs-showcase">
+        <div class="container">
+            <h2>Our Impact in Numbers</h2>
+            <p>Discover the measurable results and growth metrics that define our success.</p>
+            <div class="graphs-grid">
+                <div class="graph-item">
+                    <h3>User Growth</h3>
+                    <canvas id="indexChart1"></canvas>
+                </div>
+                <div class="graph-item">
+                    <h3>Service Distribution</h3>
+                    <canvas id="indexChart2"></canvas>
+                </div>
+                <div class="graph-item">
+                    <h3>Monthly Revenue</h3>
+                    <canvas id="indexChart3"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        console.log("Index page loaded");
+        console.log("Page HTML:", document.documentElement.outerHTML);
+    </script>

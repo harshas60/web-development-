@@ -1,29 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-
-<title>Login</title>
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CreativeHub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="auth-page">
 
-<nav class="navbar">
+    <nav class="navbar">
+        <div class="logo">CreativeHub</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
 
-<div class="logo">CreativeHub</div>
+    <section class="auth-hero">
+        <div class="auth-card">
+            <div class="auth-left">
+                <h1>Welcome back!</h1>
+                <p>Enter your details to access your dashboard, review reports, and manage your creative projects.</p>
+                <ul class="auth-features">
+                    <li>Modern dashboard designs</li>
+                    <li>Performance insights at a glance</li>
+                    <li>Secure and fast login</li>
+                </ul>
+                <p class="auth-note">Don’t have an account? <a href="signup.html">Create one now</a>.</p>
+            </div>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="dashboard.html">Dashboard</a>
-<a href="contact.html">Contact</a>
-<a href="signup.html">Sign Up</a>
-<a href="login.html">Login</a>
-</div>
+            <div class="auth-right">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required placeholder="********">
+                    </div>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-</nav>
-
-<h1 class="center">Login Page</h1>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designs | CreativeHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CreativeHub</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <section class="designs-hero">
+        <div class="container">
+            <h1>Our Design Gallery</h1>
+            <p>Browse the best work from our team and community. Upload your own designs to share and inspire others.</p>
+        </div>
+    </section>
+
+    <section class="designs-gallery">
+        <div class="container">
+            <h2>Featured Designs</h2>
+
+            <div class="designs-grid" id="designsGrid">
+                <!-- Pre-filled designs -->
+                <div class="design-card">
+                    <div class="design-media" style="background-image: url('https://picsum.photos/seed/design1/500/350');"></div>
+                    <div class="design-content">
+                        <h3>Neon Dashboard UI</h3>
+                        <p>A modern, high-contrast dashboard layout built for analytics apps.</p>
+                    </div>
+                </div>
+                <div class="design-card">
+                    <div class="design-media" style="background-image: url('https://picsum.photos/seed/design2/500/350');"></div>
+                    <div class="design-content">
+                        <h3>Minimal Portfolio</h3>
+                        <p>Clean portfolio layout with subtle gradients and simple typography.</p>
+                    </div>
+                </div>
+                <div class="design-card">
+                    <div class="design-media" style="background-image: url('https://picsum.photos/seed/design3/500/350');"></div>
+                    <div class="design-content">
+                        <h3>Product Landing</h3>
+                        <p>A bold landing page experience built for conversion and storytelling.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload-panel" id="upload">
+                <h2>Upload Your Work</h2>
+                <p>Share your design with the CreativeHub community. Your upload will appear instantly in the gallery.</p>
+                <form id="uploadForm" class="upload-form">
+                    <div class="form-group">
+                        <label for="designTitle">Design Title</label>
+                        <input type="text" id="designTitle" name="designTitle" placeholder="E.g. Mobile App Concept" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="designDesc">Description</label>
+                        <textarea id="designDesc" name="designDesc" rows="4" placeholder="Briefly describe this design" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="designFile">Upload Image (PNG/JPG)</label>
+                        <input type="file" id="designFile" name="designFile" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Upload Design</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        const designsGrid = document.getElementById('designsGrid');
+        const uploadForm = document.getElementById('uploadForm');
+
+        if (uploadForm) {
+            uploadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const title = document.getElementById('designTitle').value.trim();
+                const desc = document.getElementById('designDesc').value.trim();
+                const file = document.getElementById('designFile').files[0];
+
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const card = document.createElement('div');
+                    card.className = 'design-card';
+                    card.innerHTML = `
+            <div class="design-media" style="background-image: url('${event.target.result}');"></div>
+            <div class="design-content">
+              <h3>${title}</h3>
+              <p>${desc}</p>
+            </div>
+          `;
+                    designsGrid.prepend(card);
+                };
+
+                reader.readAsDataURL(file);
+                uploadForm.reset();
+                alert('Design uploaded! It will appear in the gallery above.');
+            });
+        }
+    </script>
+
+</body>
+
+</html>
